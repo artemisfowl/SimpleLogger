@@ -33,5 +33,16 @@ public class ConsoleLogging {
 		
 		logger = SimpleLogger.getLogger();
 		logger.warning("Testing a write");
+
+		int count = 0;
+		while (true) {
+			logger.info("Testing a info");
+			count++;
+			logger.warning("Updated counter");
+			if (count == 3) {
+				logger.warning("Breaking out of the loop");
+				break;
+			}
+		}
 	}
 }

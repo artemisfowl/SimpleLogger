@@ -81,7 +81,7 @@ public class SimpleLogger {
 			_logger.addHandler(consoleHandler);
 		}
 		if (logToFile) {
-			this.fileHandler = new FileHandler(this._fpath);
+			this.fileHandler = new FileHandler(this._fpath, true);
 			this.fileHandler.setLevel(loggingLevel == null ? Level.INFO : loggingLevel);
 			if (_format.equalsIgnoreCase(Constants.DEFAULT_FORMAT)) {
 				this.fileHandler.setFormatter(new SimpleFormatter() {
